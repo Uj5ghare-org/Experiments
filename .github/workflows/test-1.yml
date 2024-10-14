@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: test the env var
         run: |
-          echo -e ${{ vars.ENV }}> .env
+          echo -e ${{ vars.ENV }} > .env
           cat .env 
           
