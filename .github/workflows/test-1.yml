@@ -1,0 +1,14 @@
+name: Test-1 Workflow
+on:
+  push:
+    branches: [Test-1]
+
+jobs:
+  env-testing:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: test the env var
+        run: |
+          echo -e ${{ vars.ENV }}> .env
+          cat .env 
+          
