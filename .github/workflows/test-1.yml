@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: test the env var
-        run: |
-          echo ${{ vars.ENV }} > .env
-          cat .env 
-          
+        run: echo -e ${{ vars.ENV }} > .env
+      - name: getting env
+        run: cat .env
