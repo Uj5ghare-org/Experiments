@@ -1,7 +1,8 @@
-name: Test-1 Workflow
+name: Testing for env variable 
 on:
   push:
-    branches: [Test-1]
+    paths:
+      - .github/workflows/test-1.yml
 
 jobs:
   env-testing:

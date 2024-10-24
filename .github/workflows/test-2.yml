@@ -1,0 +1,14 @@
+name: Testing for github-token
+on:
+  push:
+    paths:
+      - .github/workflows/test-2.yml
+
+jobs:
+  test-2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.TOKEN }}
